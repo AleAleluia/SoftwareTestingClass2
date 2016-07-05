@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class main {
 	public static void main(String[] args){
 		Scanner scan = new Scanner(System.in);
-		int escolha, tam, run=0, preenchido=0, elemento;
+		int escolha, tam, run=0, preenchido=0, elemento, aux=0;
 		
 		System.out.println("Diga o tamanho da fila");
 		tam = scan.nextInt();
@@ -47,18 +47,46 @@ public class main {
 				
 			case 2:
 				System.out.println("Remove selecionado");
+				if(preenchido == 0){
+					System.out.println("Nao ha elemento para remover");
+				}
+				else{
+					System.out.print(fila[0]);
+					System.out.println();
+					aux=0;
+					while(aux < preenchido){
+						fila[aux] = fila[++aux];
+						aux++;
+					}
+					preenchido--;
+				}
 				break;
 				
 			case 3:
 				System.out.println("Element selecionado");
+				if(preenchido == 0){
+					System.out.println("Nao ha elemento para mostrar");
+				}
+				else{
+					System.out.print(fila[0]);
+					System.out.println();
+				}
 				break;
 				
 			case 4:
 				System.out.println("Size selecionado");
+				System.out.print(preenchido);
+				System.out.println();
 				break;
 				
 			case 5:
 				System.out.println("Print selecionado");
+				aux=0;
+				while(aux<preenchido){
+					System.out.print(fila[aux]);
+					System.out.println();
+					aux++;
+				}
 				break;
 				
 			case 6:
