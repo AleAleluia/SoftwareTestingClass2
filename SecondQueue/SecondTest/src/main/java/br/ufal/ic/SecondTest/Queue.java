@@ -17,10 +17,6 @@ public class Queue {
 		this.filled = 0;
 	}
 	
-	public int getSize(){
-		return this.size;
-	}
-	
 	public void add(int elemento){
 		if(this.filled == 0)
 		{

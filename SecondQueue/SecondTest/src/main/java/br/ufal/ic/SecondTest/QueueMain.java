@@ -26,7 +26,7 @@ public class QueueMain {
 					System.out.println("2 - Remove"); ///Remove e imprime o primeiro elemento
 					System.out.println("3 - Element");  ///Imprime o primeiro elemento
 					System.out.println("4 - Size"); ///Retorna o tamanho da lista
-					System.out.println("5 - Print"); ///Remove todos os elementos e imprime
+					System.out.println("5 - Print"); ///Imprime
 					System.out.println("6 - Quit"); ///Encerra o programa
 					
 					choose = Integer.parseInt(scan1.next());
